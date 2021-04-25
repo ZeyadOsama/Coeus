@@ -10,6 +10,7 @@
 #include <coeus/utils/StringHelper.hpp>
 
 #include <fstream>
+#include <algorithm>
 
 using namespace coeus::parsers;
 using namespace coeus::dataunits;
