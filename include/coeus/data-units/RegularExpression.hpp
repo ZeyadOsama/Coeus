@@ -29,6 +29,14 @@ namespace coeus {
             std::unordered_set<std::string>
             ExtractInputSymbols();
 
+            /**
+             * @brief Converts the incoming infix string to a postfix string
+             *
+             * @return a string with the postfix version of the infix input.
+             */
+            std::string
+            InfixToPostfix(std::unordered_set<std::string> aInputTable);
+
         private:
             std::string mKey;
             std::string mVal;
