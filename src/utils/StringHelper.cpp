@@ -4,6 +4,7 @@
 
 #include <coeus/utils/StringHelper.hpp>
 
+#include <algorithm>
 #include <sstream>
 
 using namespace coeus::utils;
@@ -72,7 +73,9 @@ StringHelper::SplitOnFirstOfDelimiters(const std::string &aStr, const std::strin
 
 std::vector<std::string>
 StringHelper::SplitOnStringDelimiter(const std::string &aStr, const std::string &aDelimiter) {
-    size_t pos_start = 0, pos_end, delimiter_len = aDelimiter.length();
+    size_t pos_start = 0;
+    size_t pos_end;
+    size_t delimiter_len = aDelimiter.length();
     std::string token;
     std::vector<std::string> tokens;
 

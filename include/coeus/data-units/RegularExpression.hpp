@@ -6,6 +6,7 @@
 #define COEUS_DATA_UNITS_REGULAR_EXPRESSION_HPP
 
 #include <string>
+#include <unordered_set>
 
 namespace coeus {
     namespace dataunits {
@@ -14,6 +15,19 @@ namespace coeus {
             explicit RegularExpression(std::string &aKey, std::string &aVal);
 
             ~RegularExpression();
+
+        public:
+            inline const std::string &
+            GetName() const { return this->mKey; };
+
+            inline const std::string &
+            GetValue() const { return this->mVal; };
+
+            void
+            ApplyRangeOperationIfExists();
+
+            std::unordered_set<std::string>
+            ExtractInputSymbols();
 
         private:
             std::string mKey;
