@@ -7,7 +7,11 @@
 
 namespace coeus {
     namespace states {
-        class NFAstate {
+        class NFA {
+        public:
+
+
+        private:
 
         };
     } // namespace states
